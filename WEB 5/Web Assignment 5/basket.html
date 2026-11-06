@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Basket & Checkout | Kampala Fresh Fish Delivery</title>
+  <meta name="description" content="Review your fresh fish basket, calculate delivery and send your order to Kampala Fresh Fish Delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a href="index.html" class="logo"><span class="logo-mark">🐟</span><span>Kampala Fresh Fish<small>Delivery</small></span></a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="tracking.html">Track Order</a></li>
+        <li><a href="basket.html" class="basket-link active">🧺 Basket <span class="basket-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Your order</span>
+        <h1>Basket & checkout</h1>
+        <p>Review your fish, choose a delivery area and tell us where to bring your order.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container checkout">
+        <div class="panel">
+          <h2>Your basket</h2>
+          <div id="basketItems"></div>
+        </div>
+        <aside class="panel">
+          <h2>Order summary</h2>
+          <div class="summary-row"><span>Items</span><span id="sumItems">0</span></div>
+          <div class="summary-row"><span>Subtotal</span><span id="sumSubtotal">UGX 0</span></div>
+          <div class="summary-row"><span>Delivery</span><span id="sumDelivery">Select area</span></div>
+          <div class="summary-row total"><span>Total</span><span id="sumTotal">UGX 0</span></div>
+          <p style="color:var(--muted);font-size:.85rem;margin-top:16px">The delivery fee updates when you select your area below.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container" style="max-width:900px">
+        <div class="section-head">
+          <span class="eyebrow">Delivery details</span>
+          <h2 class="section-title">Where should we deliver?</h2>
+          <p>Complete the form below. Fields marked with an asterisk are required.</p>
+        </div>
+        <form class="panel form" id="checkoutForm" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="name">Full name *</label><input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Benard Wambi"><div class="error"></div></div>
+            <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 0772123456"><div class="error"></div></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="email">Email address (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"><div class="error"></div></div>
+            <div class="field"><label for="area">Delivery area *</label><select id="area" name="area"><option value="">Select your area</option></select><div class="error"></div></div>
+          </div>
+          <div class="field"><label for="address">Address or nearest landmark *</label><input id="address" name="address" type="text" autocomplete="street-address" placeholder="Street, building and a clear landmark"><div class="error"></div></div>
+          <div class="form-row">
+            <div class="field"><label for="date">Delivery date *</label><input id="date" name="date" type="date"><div class="error"></div></div>
+            <div class="field"><label for="time">Preferred time *</label><select id="time" name="time"><option value="">Choose a time slot</option><option>8:00 am – 11:00 am</option><option>11:00 am – 2:00 pm</option><option>2:00 pm – 5:00 pm</option><option>5:00 pm – 7:00 pm</option></select><div class="error"></div></div>
+          </div>
+          <div class="field">
+            <label>Payment method *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="payment" value="Cash on delivery" checked> Cash on delivery</label>
+              <label><input type="radio" name="payment" value="MTN Mobile Money"> MTN Mobile Money</label>
+              <label><input type="radio" name="payment" value="Airtel Money"> Airtel Money</label>
+            </div>
+          </div>
+          <div class="field"><label for="notes">Order notes (optional)</label><textarea id="notes" name="notes" rows="4" placeholder="Preparation requests or directions for the rider"></textarea></div>
+          <button class="btn btn-primary btn-block" id="placeOrder" type="button">Place Order →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">🐟</span><span>Kampala Fresh Fish<small>Delivery</small></span></a>
+        <p style="margin-top:14px;font-size:.92rem">Fresh fish from Lake Victoria's landing sites, delivered across Kampala.</p>
+        <div class="socials">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+          <a href="https://wa.me/256700123456" target="_blank" rel="noopener" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="basket.html">Basket</a></li><li><a href="tracking.html">Track Order</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>📍 Plot 12, Nakasero Market Rd, Kampala</li><li>📞 +256 700 123 456</li><li>✉️ orders@kampalafreshfish.ug</li></ul></div>
+      <div><h4>Opening hours</h4><ul><li>Mon – Sat: 6:00am – 7:00pm</li><li>Sunday: 8:00am – 2:00pm</li></ul></div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Kampala Fresh Fish Delivery. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

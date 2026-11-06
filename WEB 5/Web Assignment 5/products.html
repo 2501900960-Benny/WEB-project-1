@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Products & Prices | Kampala Fresh Fish Delivery</title>
+  <meta name="description" content="Browse fresh tilapia, Nile perch, catfish, mukene, fillets and smoked fish with current prices and stock.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a href="index.html" class="logo"><span class="logo-mark">🐟</span><span>Kampala Fresh Fish<small>Delivery</small></span></a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="tracking.html">Track Order</a></li>
+        <li><a href="basket.html" class="basket-link">🧺 Basket <span class="basket-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Fresh from our suppliers</span>
+        <h1>Browse today's catch</h1>
+        <p>Search by name, filter by category or source, and see current prices and available quantities before you order.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar" aria-label="Product search and filters">
+          <input class="search" id="searchInput" type="search" placeholder="Search fish, source or description…" aria-label="Search products">
+          <select id="sourceFilter" aria-label="Filter by source">
+            <option value="All">All sources</option>
+            <option value="Entebbe">Entebbe</option>
+            <option value="Jinja">Jinja</option>
+            <option value="Mukono">Mukono</option>
+            <option value="Kalangala">Kalangala</option>
+          </select>
+          <select id="stockFilter" aria-label="Filter by availability">
+            <option value="all">All availability</option>
+            <option value="in">In stock only</option>
+          </select>
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="default">Sort: Featured</option>
+            <option value="low">Price: Low to high</option>
+            <option value="high">Price: High to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+        <div class="chips" id="categoryChips" aria-label="Product categories">
+          <button class="chip active" data-cat="All">All fish</button>
+          <button class="chip" data-cat="Fresh">🐟 Fresh</button>
+          <button class="chip" data-cat="Fillets">🔪 Fillets</button>
+          <button class="chip" data-cat="Smoked">🔥 Smoked</button>
+          <button class="chip" data-cat="Dried">☀️ Dried</button>
+        </div>
+        <p class="results-info" id="resultsInfo" aria-live="polite"></p>
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Ordering made simple</span>
+          <h2 class="section-title">From catch to kitchen in three steps</h2>
+        </div>
+        <div class="benefits">
+          <div class="benefit"><div class="icon">🧺</div><h3>1. Fill your basket</h3><p>Choose your fish and quantities. Available stock is shown on every product.</p></div>
+          <div class="benefit"><div class="icon">📝</div><h3>2. Add delivery details</h3><p>Select your area, date, time and preferred payment method.</p></div>
+          <div class="benefit"><div class="icon">🛵</div><h3>3. Track your order</h3><p>Follow your order as it is sourced, cleaned, packed and delivered.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta-band">
+        <div><h2>Ready to order?</h2><p>Review your basket and arrange same-day delivery.</p></div>
+        <a href="basket.html" class="btn btn-primary">Go to Basket →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">🐟</span><span>Kampala Fresh Fish<small>Delivery</small></span></a>
+        <p style="margin-top:14px;font-size:.92rem">Fresh fish from Lake Victoria's landing sites, delivered across Kampala.</p>
+        <div class="socials">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+          <a href="https://wa.me/256700123456" target="_blank" rel="noopener" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="basket.html">Basket</a></li><li><a href="tracking.html">Track Order</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>📍 Plot 12, Nakasero Market Rd, Kampala</li><li>📞 +256 700 123 456</li><li>✉️ orders@kampalafreshfish.ug</li></ul></div>
+      <div><h4>Opening hours</h4><ul><li>Mon – Sat: 6:00am – 7:00pm</li><li>Sunday: 8:00am – 2:00pm</li></ul></div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Kampala Fresh Fish Delivery. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Order | Kampala Fresh Fish Delivery</title>
+  <meta name="description" content="View your order confirmation and follow your fresh fish delivery from sourcing to arrival.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a href="index.html" class="logo"><span class="logo-mark">🐟</span><span>Kampala Fresh Fish<small>Delivery</small></span></a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="tracking.html" class="active">Track Order</a></li>
+        <li><a href="basket.html" class="basket-link">🧺 Basket <span class="basket-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Order confirmation</span>
+        <h1>Track your delivery</h1>
+        <p>Follow your order from the landing site to your doorstep.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" id="trackingRoot"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">🐟</span><span>Kampala Fresh Fish<small>Delivery</small></span></a>
+        <p style="margin-top:14px;font-size:.92rem">Fresh fish from Lake Victoria's landing sites, delivered across Kampala.</p>
+        <div class="socials">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+          <a href="https://wa.me/256700123456" target="_blank" rel="noopener" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="basket.html">Basket</a></li><li><a href="tracking.html">Track Order</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>📍 Plot 12, Nakasero Market Rd, Kampala</li><li>📞 +256 700 123 456</li><li>✉️ orders@kampalafreshfish.ug</li></ul></div>
+      <div><h4>Opening hours</h4><ul><li>Mon – Sat: 6:00am – 7:00pm</li><li>Sunday: 8:00am – 2:00pm</li></ul></div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Kampala Fresh Fish Delivery. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/tracking.js"></script>
+</body>
+</html>
